@@ -15,15 +15,17 @@ Due to the large size of the pre-trained model file, please manually download `c
 2. Place the downloaded `ckpt.pth` file in the following path:
     "./out/logs/celeba-64/ckpt.pth"
 3. Ensure the directory structure is as follows:
+```bash
 Improved-Generative-Steganography-Based-on-Diffusion-Model-code-2025/
 ├── out/
 │ └── logs/
 │  └── celeba-64/
 │   └── ckpt.pth # Place the downloaded model file here
 │   └── config.yml
-│   └── stdout.txt
 ├── README.md
 └── ...
+```
+
 If the `out/logs/celeba-64` directory does not exist, create it using the following command:
 ```bash
 mkdir -p out/logs/celeba-64
