@@ -1,0 +1,52 @@
+!!python/object:argparse.Namespace
+data: !!python/object:argparse.Namespace
+  channels: 3
+  dataset: CELEBA
+  gaussian_dequantization: true
+  image_size: 64
+  logit_transform: false
+  num_workers: 8
+  random_flip: true
+  rescaled: true
+  uniform_dequantization: false
+diffusion: !!python/object:argparse.Namespace
+  beta_end: 0.02
+  beta_schedule: linear
+  beta_start: 0.0001
+  num_diffusion_timesteps: 1000
+model: !!python/object:argparse.Namespace
+  attn_resolutions:
+  - 16
+  ch: 128
+  ch_mult:
+  - 1
+  - 2
+  - 2
+  - 2
+  - 4
+  dropout: 0.1
+  ema: true
+  ema_rate: 0.9999
+  in_channels: 3
+  num_res_blocks: 2
+  out_ch: 3
+  resamp_with_conv: true
+  type: simple
+  var_type: fixedlarge
+optim: !!python/object:argparse.Namespace
+  amsgrad: false
+  beta1: 0.9
+  eps: 1.0e-08
+  grad_clip: 1.0
+  lr: 0.0002
+  optimizer: Adam
+  weight_decay: 0.0
+sampling: !!python/object:argparse.Namespace
+  batch_size: 1
+  last_only: true
+training: !!python/object:argparse.Namespace
+  batch_size: 72
+  n_epochs: 10000
+  n_iters: 5000000
+  snapshot_freq: 5000
+  validation_freq: 20000
